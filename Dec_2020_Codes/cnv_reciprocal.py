@@ -1,0 +1,11 @@
+import pandas as pd
+bam= pd.read_table("C:/Users/ash24/Downloads/IN-423-TJZD-F2-RE.bam_CNVs")
+
+for i in range(len(bam)):
+    if bam.strt[i]>bam.end[i]:
+        start=bam.strt[i]
+        end= bam.end[i]
+        bam.strt[i]=end
+        bam.end[i]=start
+
+bam.to_csv("C:/Users/ash24/Downloads/IN-423-TJZD-F2-RE.output.txt", sep="\t",index=False)
