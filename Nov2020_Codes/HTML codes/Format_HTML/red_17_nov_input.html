@@ -1,0 +1,255 @@
+<html>
+  
+<!--Style-->
+<style>
+    #heading{
+    background-color:mediumvioletred;
+    color: white;
+    width: 1100px;
+    margin-left: 40px;
+    padding: 2px;
+    text-align: center;}
+
+    #form{
+        margin-left: 60px;
+    }
+
+    </style>
+    
+<head>
+    <h3 id="heading"> Fill the details here </h3>
+
+    <!--Input Fields 1-->
+    <h4 id="heading"> Basic Details </h4>
+    <!--Basic details-->
+    <div id="form">
+        <form action="PayslipServlet" method="get">
+            Patient name:  </br><input type="text" name="lname" id="lname"><br/>
+            Patient ID:   </br><input type="text" name="fname" id="fname"><br/>
+            Sample Source:  </br><input type="text" name="mname" id ="mname"><br/>
+            Gender:    </br><input type="text" name="gname" id="gname"><br/>
+            D.O.B/Age:  </br> <input type="text" name="dob" id="dob"><br/>
+            Collection Date:  </br><input type="text" name="sname" id ="sname"><br/>
+            Referring Clinician: </br> <input type="text" name="rname" id ="rname"><br/>
+            Hospital:  </br><input type="text" name="hname" id ="hname"><br/>
+            Clinical Indication: </br> <input type="text" name="cname" id ="cname"><br/>
+            Reporting Date </br> <input type="text" name="rdate" id ="rdate"><br/>
+        </form>
+    </div>
+    
+    <br>
+    <!--Page 1-->
+    <h4 id="heading"> PAGE 1: Genomic Variants Highlights </h4>
+    <div id="form">
+        <h4> Clinically actionable variants: <br></h4>
+        <form action="PayslipServlet" method="get">
+           
+            Variant type 1: <br><input type="text" name="vtype1"></inpu> <br> 
+            Mutation analysed 1: <br> <input type="text" name="mtype1"></inpu> <br>
+            Variant type 2: <br> <input type="text" name="vtype2"></inpu> <br> 
+            Mutation analysed 2: <br> <input type="text" name="mtype2"></inpu> <br>
+            
+        </form>
+        <h4> Associated therapy (Level 1)  <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="10"></textarea>
+        <h4> Driver Variant(s) <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="4"></textarea>
+        <h4> Pathways driving cancer <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="6"></textarea>
+           
+    </div>
+<br>
+    
+
+<h4 id="heading"> PAGE 2: IMMUNOTHERAPY HIGHLIGHTS </h4>
+<!--Input should fill the cell-->
+<div id="form">
+    <table class="p2tab">
+        <tr>
+            <th>Biomarkers</th>
+            <th> Technique</th>
+            <th> Status </th>
+        </tr>
+        <tr>
+            <td>PD-L1 IHC Test</td>
+            <td> IHC</td>
+            <td><input type="text" name="p2_input1" id ="p2_input1"> </td>
+        </tr>
+        <tr>
+        <td> Tumor Mutation Burden </td>
+        <td> NGS </td>
+        <td><input type="text" name="p2_input2" id ="p2_input2"></td>
+        </tr>
+
+        <tr>
+        <td> Microsatellite Instability </td>
+        <td> NGS </td>
+        <td><input type="text" name="p2_input3" id ="p2_input3"></td>
+        </tr>
+
+    </table>   
+    <br>
+    <h4> Immunotherapy remarks </h4>
+    <textarea name="p2_remarks" cols="100" rows="2"></textarea>
+
+</div>
+
+
+<!--Page 2 Picture input-->
+<div id="form">
+    <h4> Pictorial representation of Immunotherapy Biomarkers</h4>
+
+<input id="fileupload" type="file" />
+
+</div>
+
+
+<!--Page 3 input-->
+<h4 id="heading"> PAGE 3: THERPAY BASED ON IMMUNOTHERAPY BIOMARKERS </h4>
+<div id="form">
+    <form>
+        Biomarker Name:  </br><input type="text" name="biomarker" id="biomarker"><br/>
+        <br>
+        <form>
+            Therapy 1: <input type="text" name="gname" id="gname"><br/>
+        </form>
+        
+        <h4> Therapy 1 description <br></h4>
+        <textarea name="therapy1" cols="100" rows="20"></textarea>
+        <br/>
+        <br>
+        <form>
+            Therapy 2: <input type="text" name="gname" id="gname"><br/>
+        </form> 
+        <h4> Therapy 2 <br></h4>
+        <textarea name="therapy2" cols="100" rows="20"></textarea>
+
+    </form>
+
+</div>
+
+<!--Page 4 Input-->
+<h4 id="heading"> PAGE 4: VARIANTS WITH CLINICALLY RELEVANT THERAPIES </h4>
+<div id="form">
+    <h4>Summary of Relevant Therapies in same cancer type </h4>
+    <form>
+        Gene1: <br><input type="text" name="p4_gene1" id="p4_gene1"> <br>
+    </form>
+    
+    <table class="p4">
+       <tr>
+        <th>Therapy</th>
+        <th>Cancer Type</th>
+        <th>Effect</th>
+        <th>Evidence</th>
+        <th>Reference</th>
+       </tr> 
+       <tr>
+           <td><input type="text" name="p4_t1c1" id="p4_t1c1"> </td>
+           <td><input type="text" name="p4_t1c2" id="p4_t1c2"> </td>
+           <td><input type="text" name="p4_t1c3" id="p4_t1c3"> </td>
+           <td><input type="text" name="p4_t1c4" id="p4_t1c4"> </td>
+           <td><input type="text" name="p4_t1c5" id="p4_t1c5"> </td>
+       </tr>
+       <tr>
+        <td><input type="text" name="p4_t2c1" id="p4_t2c1"> </td>
+        <td><input type="text" name="p4_t2c2" id="p4_t2c2"> </td>
+        <td><input type="text" name="p4_t2c3" id="p4_t2c3"> </td>
+        <td><input type="text" name="p4_t2c4" id="p4_t2c4"> </td>
+        <td><input type="text" name="p4_t2c5" id="p4_t2c5"> </td>
+    </tr>
+    <tr>
+        <td><input type="text" name="p4_t3c1" id="p4_t3c1"> </td>
+        <td><input type="text" name="p4_t3c2" id="p4_t3c2"> </td>
+        <td><input type="text" name="p4_t3c3" id="p4_t3c3"> </td>
+        <td><input type="text" name="p4_t3c4" id="p4_t3c4"> </td>
+        <td><input type="text" name="p4_t3c5" id="p4_t3c5"> </td>
+    </tr>
+    <tr>
+        <td><input type="text" name="p4_t4c1" id="p4_t4c1"> </td>
+        <td><input type="text" name="p4_t4c2" id="p4_t4c2"> </td>
+        <td><input type="text" name="p4_t4c3" id="p4_t4c3"> </td>
+        <td><input type="text" name="p4_t4c4" id="p4_t4c4"> </td>
+        <td><input type="text" name="p4_t4c5" id="p4_t4c5"> </td>
+    </tr>
+    </table> <br>
+    <br>
+    <form>
+        Gene2: <br><input type="text" name="p4_gene" id="p4_gene"> <br>
+    </form>
+    <table class="p4">
+        <tr>
+         <th>Therapy</th>
+         <th>Cancer Type</th>
+         <th>Effect</th>
+         <th>Evidence</th>
+         <th>Reference</th>
+        </tr> 
+        <tr>
+            <td><input type="text" name="p4_t1c1" id="p4_t1c1"> </td>
+            <td><input type="text" name="p4_t1c2" id="p4_t1c2"> </td>
+            <td><input type="text" name="p4_t1c3" id="p4_t1c3"> </td>
+            <td><input type="text" name="p4_t1c4" id="p4_t1c4"> </td>
+            <td><input type="text" name="p4_t1c5" id="p4_t1c5"> </td>
+        </tr>
+        <tr>
+         <td><input type="text" name="p4_t2c1" id="p4_t2c1"> </td>
+         <td><input type="text" name="p4_t2c2" id="p4_t2c2"> </td>
+         <td><input type="text" name="p4_t2c3" id="p4_t2c3"> </td>
+         <td><input type="text" name="p4_t2c4" id="p4_t2c4"> </td>
+         <td><input type="text" name="p4_t2c5" id="p4_t2c5"> </td>
+     </tr>
+     </table>
+
+     <h4>Summary of Relevant Therapies in same cancer type </h4> 
+
+</div>
+
+<!--Page 5-->
+<h4 id="heading"> PAGE 5: CLINICAL TRIAL </h4>
+<div id="form">
+    <h4> Clinical Trial Details</h4>
+    <textarea name="clinical_trial" cols="100" rows="15"></textarea>
+
+</div>
+
+<!--Page 6-->
+<div id="form">
+    <br>
+    <form>
+        Study Title: <br>
+        <textarea name="p6_title" cols="100" rows="5"></textarea> <br><br>
+        Brief Summary: <br>
+        <textarea name="p6_sum" cols="100" rows="5"></textarea> <br><br>
+        Study Phase: <br>
+        <textarea name="p6_phase" cols="100" rows="5"></textarea><br><br>
+        Condition: <br>
+        <textarea name="p6_condition" cols="100" rows="5"></textarea> <br><br>
+        NCT Number: <br>
+        <textarea name="p6_nct" cols="100" rows="5"></textarea><br><br>
+        Intervention: <br>
+        <textarea name="p6_int" cols="100" rows="5"></textarea><br><br>
+        Last Updates: <br>
+        <input type="text" name="p6_date" id="p6_date" ></textarea><br><br>
+    
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+<!--Button-->
+<br>
+<div id="form">
+    <br>
+    <input type="button" value="Submit" onClick="pr()">
+</div>
+
+
+</head>
+</html>

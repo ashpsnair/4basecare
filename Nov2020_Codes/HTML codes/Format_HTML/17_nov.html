@@ -1,0 +1,100 @@
+<html>
+  
+<!--Style-->
+        <link href= "style.css" rel="stylesheet">
+    
+<head>
+    <h3 id="heading"> Fill the details here </h3>
+
+    <!--Input Fields 1-->
+    <h4 id="heading"> Basic Details </h4>
+    <!--Basic details-->
+    <div id="form">
+        <form action="PayslipServlet" method="get">
+            Patient name:  </br><input type="text" name="lname" id="lname"><br/>
+            Patient ID:   </br><input type="text" name="fname" id="fname"><br/>
+            Sample Source:  </br><input type="text" name="mname" id ="mname"><br/>
+            Gender:    </br><input type="text" name="gname" id="gname"><br/>
+            D.O.B/Age:  </br> <input type="text" name="dob" id="dob"><br/>
+            Collection Date:  </br><input type="text" name="sname" id ="sname"><br/>
+            Referring Clinician: </br> <input type="text" name="rname" id ="rname"><br/>
+            Hospital:  </br><input type="text" name="hname" id ="hname"><br/>
+            Clinical Indication: </br> <input type="text" name="cname" id ="cname"><br/>
+            Reporting Date </br> <input type="text" name="rdate" id ="rdate"><br/>
+        </form>
+    </div>
+    
+    <br>
+    <!--Page 1-->
+    <h4 id="heading"> PAGE 1: Genomic Variants Highlights </h4>
+    <div id="form">
+        <h4> Clinically actionable variants: <br></h4>
+        <form action="PayslipServlet" method="get">
+           
+            Variant type 1: <br><input type="text" name="vtype1"></inpu> <br> 
+            Mutation analysed 1: <br> <input type="text" name="mtype1"></inpu> <br>
+            Variant type 2: <br> <input type="text" name="vtype2"></inpu> <br> 
+            Mutation analysed 2: <br> <input type="text" name="mtype2"></inpu> <br>
+            
+        </form>
+        <h4> Associated therapy (Level 1)  <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="10"></textarea>
+        <h4> Driver Variant(s) <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="4"></textarea>
+        <h4> Pathways driving cancer <br></h4>
+        <textarea name="p1_therapy" cols="50" rows="6"></textarea>
+           
+    </div>
+<br>
+    
+
+<h4 id="heading"> PAGE 2: IMMUNOTHERAPY HIGHLIGHTS </h4>
+<!--Input should fill the cell-->
+<div id="form">
+    <table class="p2tab">
+        <tr>
+            <th>Biomarkers</th>
+            <th> Technique</th>
+            <th> Status </th>
+        </tr>
+        <tr>
+            <td>PD-L1 IHC Test</td>
+            <td> IHC</td>
+            <td><input type="text" name="p2_input1" id ="p2_input1"> </td>
+        </tr>
+        <tr>
+        <td> Tumor Mutation Burden </td>
+        <td> NGS </td>
+        <td><input type="text" name="p2_input2" id ="p2_input2"></td>
+        </tr>
+
+        <tr>
+        <td> Microsatellite Instability </td>
+        <td> NGS </td>
+        <td><input type="text" name="p2_input3" id ="p2_input3"></td>
+        </tr>
+
+    </table>   
+    <br>
+    <h4> Immunotherapy remarks </h4>
+    <textarea name="p2_remarks" cols="100" rows="2"></textarea>
+
+</div>
+
+
+<!--Page 2 Picture input-->
+<div id="form">
+    <h4> Pictorial representation of Immunotherapy Biomarkers</h4>
+</div>
+
+
+
+<!--Button-->
+<br>
+<div id="form">
+    <br>
+    <input type="button" value="Submit" onClick="pr()">
+</div>
+
+</head>
+</html>

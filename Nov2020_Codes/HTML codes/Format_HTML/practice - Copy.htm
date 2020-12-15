@@ -1,0 +1,134 @@
+<html>
+<body>
+<page size="A4">
+<head>
+
+<style>
+html,body{
+    height: 842px;
+    width: 595px;
+   }
+
+	h4{color: blue;
+	position:absolute; top: 0; right: 0; width: 100px; text-align:right;}
+#genome{
+background-color: darkblue;
+  color: white;
+  padding: 3.5px;
+  text-align: center;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+  margin: 25px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px;
+}
+
+
+td:first-child{
+    color: white;
+    font-size:15px;
+    background:#0297d6;
+}
+
+td:nth-child(3) {
+    font-size:15px;
+    color: white;
+    background:#0297d6;
+
+}
+
+input[type="text"] {
+    width: 50%;
+    }
+
+</style>
+</head>
+
+
+<h5 id="genome"> Enter details here</h5>
+
+<form action="PayslipServlet" method="get">
+          Patient name:  </br><input type="text" name="lname" id="lname"><br/>
+          Patient ID:   </br><input type="text" name="fname" id="fname"><br/>
+          Sample Source:  </br><input type="text" name="mname" id ="mname"><br/>
+          Gender:    </br><input type="text" name="gname" id="gname"><br/>
+          D.O.B/Age:  </br> <input type="text" name="dob" id="dob"><br/>
+          Collection Date:  </br><input type="text" name="sname" id ="sname"><br/>
+          Referring Clinician: </br> <input type="text" name="rname" id ="rname"><br/>
+          Hospital:  </br><input type="text" name="hname" id ="hname"><br/>
+          Clinical Indication: </br> <input type="text" name="cname" id ="cname"><br/>
+         
+          <br>
+<input type="button" value="Submit" onClick="pr()">
+        </form>
+<h5 id="genome"> Report generated after the point</h5>
+
+<img src="https://4basecare.com/content/uploads/2018/12/logo.svg" alt="4basecare logo"
+	style="width:150px;height:80px;">
+
+<table>
+  <tr>
+    <td>Patient Name</td>
+    <td style="font-size:15px;" > <span id="pname"></span> </td>
+    <td>Patient ID</td>
+    <td style="font-size:15px;"><span id="pid"></span></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td style="font-size:15px;" ><span id="g"></span></td>
+    <td>Date of Birth/ Age</td>
+    <td style="font-size:15px;"><span id="d"></span> </td>
+  </tr>
+  <tr>
+    <td>Sample Source</td>
+    <td style="font-size:15px;"><span id="source"></span></td>
+    <td>Sample Collected</td>
+    <td style="font-size:15px;"> <span id="colect"></span> </td>
+  </tr>
+  <tr>
+    <td>Referring Clinician</td>
+    <td style="font-size:15px;"> <span id="r"></span></td>
+   </tr>
+  <tr>
+    <td>Hospital</td>
+    <td style="font-size:15px;"> <span id="h"></span></td>
+   </tr>
+  <tr>
+    <td> Clinical Indication </td>
+    <td style="font-size:15px;"><span id="c"></span></td>
+    
+  </tr>
+
+</table>
+
+
+ <script>
+          function pr() {
+            document.getElementById("pname").innerHTML = document.getElementById('lname').value;
+	    document.getElementById("pid").innerHTML = document.getElementById('fname').value;
+	    document.getElementById("source").innerHTML = document.getElementById('mname').value;
+            document.getElementById("g").innerHTML = document.getElementById('gname').value;
+	    document.getElementById("d").innerHTML = document.getElementById('dob').value;
+	    document.getElementById("colect").innerHTML = document.getElementById('sname').value;
+            document.getElementById("r").innerHTML = document.getElementById('rname').value;
+	    document.getElementById("h").innerHTML = document.getElementById('hname').value;
+	    document.getElementById("c").innerHTML = document.getElementById('cname').value;
+         
+         }
+        </script>
+
+
+</page>
+
+
+
+</body>
+</html>
+

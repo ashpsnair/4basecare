@@ -1,0 +1,59 @@
+    #heading{
+            background-color:#1874ad;
+            color: white;
+            width: 1100px;
+            margin-left: 40px;
+            padding: 2px;
+            text-align: center;}
+
+    #form{
+        margin-left: 60px;}
+
+ /* Input Page 2*/
+
+    table.p2tab {
+            font-family: arial;
+            border-collapse: collapse;
+            margin-left: 40px;
+            border: 1px solid black;
+            text-align: left;
+            padding: 3px;
+            table-layout: fixed;
+            width: 800px;}
+          
+    table.p2tab th{
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+            }
+      
+    table.p2tab td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;}
+      
+    table.p2tab :first-child{
+              width: 200px;}
+          
+    td input {
+              width: 100%;
+              box-sizing: border-box;}
+    
+    table.p4 {
+            font-family: arial;
+            border-collapse: collapse;
+            margin-left: 40px;
+            border: 1px solid black;
+            text-align: left;
+            padding: 3px;
+            table-layout: fixed;
+            width: 800px; }
+    table.p4 th{
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;}
+    table.p4 td{
+            border-collapse: collapse;
+            border: 1px solid black;
+            text-align: center;
+    }
